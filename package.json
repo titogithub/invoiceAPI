@@ -4,9 +4,10 @@
   "description": "weather app",
   "main": "dist/Server.js",
   "scripts": {
-    "start": "tsc ; node dist/Server.js",
+    "start": "node dist/Server.js",
     "test": "node node_modules/jasmine/bin/jasmine.js",
-    "build-ts": "tsc",
+    "build": "tsc",
+    "postinstall": "npm run build",
     "serve": "node dist/Server.js",
     "watch-node": "nodemon dist/Server.js",
     "watch-ts": "tsc -w"
