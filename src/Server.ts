@@ -2,7 +2,7 @@ import App from './app';
 
 const http = require('http');
 const express = new App().getExpress();
-const port = 8081;
+const port = process.env.PORT || 5000;
 express.set('port', port);
 
 const onListening = (): void => {
